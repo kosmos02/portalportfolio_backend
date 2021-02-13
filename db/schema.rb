@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_02_13_215434) do
 
   create_table "projects", force: :cascade do |t|
     t.bigint "portfolio_id", null: false
+    t.string "name"
     t.string "project_name"
     t.string "tech"
     t.string "description"

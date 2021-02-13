@@ -9,6 +9,6 @@
 alex = User.create(username: "agabriel", password: "alex", name: "Alexander Gabriel", title: "Full Stack Developer", phone_number: "7192444120", email: "alexandrgabe@gmail.com")
 
 alex_portfolio = Portfolio.create(user: alex) 
-Project.create(portfolio: alex_portfolio, project_name: "Wanderlust", tech: "Ruby on Rails, RESTful methods, Javascript, Google Maps API", description: "User can select a location on the map to mark. They can post notes about this location and other users can post comments as well.")
-Project.create(portfolio: alex_portfolio, project_name: "TrivAbility", tech: "Ruby on Rails, React, Open DB Trivia API", description: "A two player trivia game where the objective is to get to the end gameboard space. Correct answers move the player further.")
-Project.create(portfolio: alex_portfolio, project_name: "ZodiHack", tech: "Ruby on Rails, Javascript, Aztro API", description: "Aesthetically appeasing horoscope app. User can select their zodiac and view their horoscope for yesterday, today, and tomorrow.")
+Project.create(portfolio: alex_portfolio, name: "project1", project_name: "Wanderlust", tech: "Ruby on Rails, RESTful methods, Javascript, Google Maps API", description: "User can select a location on the map to mark. They can post notes about this location and other users can post comments as well.")
+Project.create(portfolio: alex_portfolio, name: "project2", project_name: "TrivAbility", tech: "Ruby on Rails, React, Open DB Trivia API", description: "A two player trivia game where the objective is to get to the end gameboard space. Correct answers move the player further.")
+Project.create(portfolio: alex_portfolio, name: "project3", project_name: "ZodiHack", tech: "Ruby on Rails, Javascript, Aztro API", description: "Aesthetically appeasing horoscope app. User can select their zodiac and view their horoscope for yesterday, today, and tomorrow.")
