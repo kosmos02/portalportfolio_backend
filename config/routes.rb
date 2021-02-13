@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :projects
   resources :portfolios
   resources :users
   post "/login", to: "users#login"

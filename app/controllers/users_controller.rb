@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     def index
         @users = User.all
 
-        render json: @users, include: [:portfolios]
+        render json: @users, include: [:portfolios => {include: :projects}]
     end
 
     def create
