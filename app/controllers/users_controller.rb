@@ -1,9 +1,15 @@
 class UsersController < ApplicationController
-    
+
+    # skip_before_action :authorized, only: [:create, :login]
+
+    def profile
+        render json: @user
+    end
+
     def index
         @users = User.all
 
-        render json: @users
+        render json: @users, include: [:portfolios]
     end
 
     def create
