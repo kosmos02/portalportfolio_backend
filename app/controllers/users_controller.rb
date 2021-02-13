@@ -23,7 +23,7 @@ class UsersController < ApplicationController
         if @user && @user.authenticate(params[:user][:password])
             @token = JWT.encode([user_id: @user.id], ENV['SECRET_KEY_BASE'])
         
-            render json: {user: @user, token: @token}
+            render json: {user: @user, include: [:portfolios], token: @token}
         else
             render json: {error: "Invalid Credentials"}, status: :unauthorized
         end
