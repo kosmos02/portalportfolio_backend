@@ -15,13 +15,9 @@ class PortfoliosController < ApplicationController
 
   # POST /portfolios
   def create
-    @portfolio = Portfolio.new(portfolio_params)
+    @portfolio = Portfolio.create(portfolio_params)
 
-    if @portfolio.save
-      render json: @portfolio, status: :created, location: @portfolio
-    else
-      render json: @portfolio.errors, status: :unprocessable_entity
-    end
+    render json: @portfolio, status: :created
   end
 
   # PATCH/PUT /portfolios/1

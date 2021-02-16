@@ -15,13 +15,9 @@ class ProjectsController < ApplicationController
 
   # POST /projects
   def create
-    @project = Project.new(project_params)
+    @project = Project.create(project_params)
 
-    if @project.save
-      render json: @project, status: :created, location: @project
-    else
-      render json: @project.errors, status: :unprocessable_entity
-    end
+    render json: @project, status: :created
   end
 
   # PATCH/PUT /projects/1
